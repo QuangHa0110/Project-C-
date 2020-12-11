@@ -1,0 +1,33 @@
+Trong bài này bạn sẽ là người ghi điểm bóng chày. Sau khi trò chơi kết thúc bạn nhận được một dãy các thao tác operations với giá trị sau tượng trưng sau
+
+Nếu là Số nguyên: là số điểm của vòng đó
+Nếu là "+": Điểm của vòng này sẽ được tính bằng tổng của điểm hợp lệ của 2 vòng trước đó
+Nếu là "D": Điểm của vòng này sẽ được tính bằng điểm hợp lệ của vòng trước nhân đôi
+Nếu là "C": Điểm của vòng trước không hợp lệ. Bạn phải xóa điểm đó đi
+Bạn hãy tính tổng điểm nhận được sau khi hết các vòng. Dữ liệu luôn đảm bảo có các điểm hợp lệ của các vòng trước để thao tác
+
+Ví dụ:
+
+Với operations = ["5","2","C","D","+"] thì kết quả baseball_game(operations) = 30
+Giải thích:
+Vòng 1: Bạn nhận được 5 điểm. Tổng điểm là 5
+
+Vòng 2: Bạn nhận được 2 điểm. Tổng điểm là 7
+
+Thao tác "C": hủy kết quả vòng trước. Tổng điểm còn lại là 5
+
+Vòng 3: Bạn nhận được 10 điểm. ( điểm vòng 1 nhân 2, do điểm vòng 2 đã bị hủy )
+
+Vòng 4: Bạn nhận được 15 điểm ( điểm vòng 3 + điểm vòng 1 )
+
+Đầu vào/Đầu ra:
+
+[Thời gian chạy] 0.5s với C++, 3s với Java và C#, 4s với Python, Go và JavaScript.
+
+[Đầu vào] array of string operations.
+0 ≤ operations.size() ≤ 104.
+
+          -1000 ≤ value ≤ 1000.
+
+[Đầu ra] Integer.
+Tổng điểm các vòng
